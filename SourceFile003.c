@@ -73,7 +73,7 @@ task usercontrol()
 {
 	bLCDBacklight = true;
 	int x = 3;
-	int y = 4;
+	int y = 5;
   string S_Value;
   sprintf(S_Value, "Adrs: %p", &x);
   displayLCDString(0,0,S_Value);
