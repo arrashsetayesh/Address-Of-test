@@ -71,14 +71,45 @@ task autonomous()
 
 task usercontrol()
 {
-	bLCDBacklight = true;
+	/*bLCDBacklight = true;
 	int x = 3;
 	int y = 5;
+
   string S_Value;
   sprintf(S_Value, "Adrs: %p", &x);
-  displayLCDString(0,0,S_Value);
+  displayLCDString(0,0,S_Value);*/
 
-  string S_Address;
+  /*string S_Address;
   sprintf(S_Address, "Adrs: %p",&y);
   displayLCDString(1,0,S_Address);
+
+  int * x_ptr = &x;
+  int * y_ptr = &y;
+
+  int diff = (int)x_ptr - (int)y_ptr;
+
+  string Diff_Str;
+  sprintf(Diff_Str, "Diff: %d",diff);
+  displayLCDString(0,4,Diff_Str);*/
+
+  int Array[5];
+
+   Array[0] = 0;
+   Array[1] = 1;
+   Array[2] = 2;
+   Array[3] = 3;
+   Array[4] = 4;
+
+   int counter;
+  string S;
+   while(true)
+   {
+     counter++;
+     counter %= 5;
+     sprintf(S, "Address: %p", (&Array[1]-Array));
+     displayLCDString(0,3,S);
+     wait1Msec(250);
+
+   }
+
 }
